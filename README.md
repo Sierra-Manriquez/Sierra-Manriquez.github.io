@@ -84,7 +84,7 @@ Simulation project focused on modeling the behavior of an elevator system and ev
 
 **LinkedIn:** [linkedin.com/in/sierra-manriquez](linkedin.com/in/sierra-manriquez)
 
-**GitHub:** [https://github.com/](https://github.com/)
+**GitHub:** [https://sierra-manriquez.github.io/](https://sierra-manriquez.github.io/)
 
 **Email:** [smmanriq@mtu.edu](mailto:smmanriq@mtu.edu)
 
