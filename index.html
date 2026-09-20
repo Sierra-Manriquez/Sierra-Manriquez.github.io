@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Engineering portfolio of a Mechanical Engineering student at Michigan Technological University.">
+  <title>Engineering Portfolio | Mechanical Engineering Student</title>
+
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #1f6feb;
+      --light-blue: #eaf2ff;
+      --gold: #f2b134;
+      --white: #ffffff;
+      --off-white: #f6f8fb;
+      --text: #243447;
+      --muted: #61758a;
+      --border: #d9e2ec;
+      --shadow: 0 8px 24px rgba(16, 42, 67, 0.08);
+      --radius: 14px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--off-white);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(16, 42, 67, 0.98), rgba(24, 70, 110, 0.95));
+      color: var(--white);
+      padding: 110px 0 100px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.7rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #8fc5ff;
+    }
+
+    .hero p {
+      max-width: 680px;
+      font-size: 1.15rem;
+      color: #d9e8f5;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: #17202a;
+    }
+
+    .button-secondary {
+      border: 1px solid rgba(255,255,255,0.45);
+      color: var(--white);
+    }
+
+    .hero-card {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      color: #d9e8f5;
+    }
+
+    .hero-card li {
+      padding: 7px 0;
+    }
+
+    .hero-card li::before {
+      content: "▹";
+      color: var(--gold);
+      margin-right: 8px;
+    }
+
+    /* General sections */
+    section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+    }
+
+    .quick-facts {
+      display: grid;
+      gap: 16px;
+    }
+
+    .fact {
+      padding: 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .fact span {
+      color: var(--muted);
+    }
+
+    /* Skills */
+    .skills-section {
+      background: var(--white);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--off-white);
+    }
+
+    .skill-card h3 {
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    .skill-card ul {
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .skill-card li {
+      margin-bottom: 7px;
+    }
+
+    /* Experience */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 42px;
+      margin-bottom: 38px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--blue);
+      border: 4px solid var(--off-white);
+      box-shadow: 0 0 0 1px var(--blue);
+    }
+
+    .timeline-item h3 {
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+
+    .timeline-meta {
+      color: var(--blue);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+    }
+
+    /* Projects */
+    .projects-section {
+      background: var(--white);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-number {
+      color: var(--blue);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .project-card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border-radius: 20px;
+      background: var(--light-blue);
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    /* Contact */
+    .contact {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      color: #d9e8f5;
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .contact-link {
+      padding: 10px 17px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+    }
+
+    footer {
+      padding: 22px;
+      text-align: center;
+      color: var(--muted);
+      background: var(--white);
+      font-size: 0.9rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 850px) {
+      .hero-grid,
+      .about-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        padding: 80px 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.7rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-container">
+      <a class="logo" href="#home">Engineering<span>Portfolio</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Mechanical Engineering Student</div>
+
+        <h1>
+          Designing, analyzing, and
+          <span>building better solutions.</span>
+        </h1>
+
+        <p>
+          I am a third-year Mechanical Engineering student at
+          Michigan Technological University with interests in mechanical
+          design, product development, engineering analysis, and reliability.
+        </p>
+
+        <div class="buttons">
+          <a class="button button-primary" href="#projects">View My Projects</a>
+          <a class="button button-secondary" href="#contact">Get In Touch</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h3>What I Bring</h3>
+        <ul>
+          <li>Mechanical design & CAD</li>
+          <li>Engineering analysis & simulation</li>
+          <li>Fabrication & machining</li>
+          <li>Experimental testing</li>
+          <li>Controls & instrumentation</li>
+          <li>Problem solving & teamwork</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-heading">
+        <h2>About Me</h2>
+        <p>A little about my engineering background and what I enjoy working on.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am pursuing a Mechanical Engineering degree at Michigan
+            Technological University, where I have developed experience
+            connecting engineering theory with hands-on design and fabrication.
+          </p>
+
+          <p>
+            My interests span mechanical design, product development,
+            engineering analysis, prototyping, manufacturing, and reliability.
+            I enjoy working through a problem from the initial concept,
+            through modeling and analysis, and into fabrication and testing.
+          </p>
+
+          <p>
+            Outside of coursework, I have gained experience through
+            undergraduate research, engineering organizations, robotics,
+            and hands-on work in Michigan Tech's Engineering Fundamentals
+            Fabrication Lab.
+          </p>
+        </div>
+
+        <div class="quick-facts">
+          <div class="fact">
+            <strong>Education</strong>
+            <span>Michigan Technological University</span>
+          </div>
+
+          <div class="fact">
+            <strong>Degree</strong>
+            <span>B.S. Mechanical Engineering</span>
+          </div>
+
+          <div class="fact">
+            <strong>Academic Highlights</strong>
+            <span>3.85 GPA · Dean's List · Pavlis Honors College</span>
+          </div>
+
+          <div class="fact">
+            <strong>Engineering Focus</strong>
+            <span>Design · Analysis · Manufacturing · Reliability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Technical Skills</h2>
+        <p>
+          Tools and methods I have used through coursework, projects,
+          research, and hands-on engineering experience.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3>CAD & Design</h3>
+          <ul>
+            <li>Onshape</li>
+            <li>Fusion 360</li>
+            <li>AutoCAD</li>
+            <li>3D Modeling</li>
+            <li>GD&T</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Analysis & Simulation</h3>
+          <ul>
+            <li>MATLAB</li>
+            <li>Simcenter 3D</li>
+            <li>FEA</li>
+            <li>AMESim</li>
+            <li>Engineering Mechanics</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Manufacturing</h3>
+          <ul>
+            <li>CNC Machining</li>
+            <li>Tormach</li>
+            <li>Mechanical Assembly</li>
+            <li>Fabrication</li>
+            <li>Prototyping</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Controls & Testing</h3>
+          <ul>
+            <li>PID Controls</li>
+            <li>Arduino</li>
+            <li>Sensors & Wiring</li>
+            <li>Experimental Testing</li>
+            <li>Data & Uncertainty Analysis</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Engineering Experience</h2>
+        <p>
+          A selection of experiences that have shaped how I approach engineering problems.
+        </p>
+      </div>
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Student Coach — Engineering Fundamentals Fabrication Lab</h3>
+          <div class="timeline-meta">Michigan Technological University</div>
+          <p>
+            Instruct incoming students on safe machinery operation in the
+            first-year maker space while supporting design, 3D modeling,
+            prototyping, fabrication, machining, troubleshooting, MATLAB,
+            and engineering class projects.
+          </p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Undergraduate Research</h3>
+          <div class="timeline-meta">Michigan Technological University</div>
+          <p>
+            Applied engineering analysis, experimentation, and problem-solving
+            skills in an undergraduate research environment.
+            <!-- Replace this paragraph with your specific research description. -->
+          </p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>Alternative Energy Enterprise</h3>
+          <div class="timeline-meta">Michigan Technological University</div>
+          <p>
+            Contributed to an interdisciplinary engineering team focused on
+            developing practical solutions related to alternative energy.
+            <!-- Add your exact project/team responsibilities here. -->
+          </p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <h3>FIRST Robotics Team 302</h3>
+          <div class="timeline-meta">Engineering & Team Leadership</div>
+          <p>
+            Worked on a large student engineering team while developing
+            technical, communication, leadership, and problem-solving skills.
+            <!-- Add your specific mechanical/robotics responsibilities here. -->
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Featured Projects</h2>
+        <p>
+          A selection of engineering projects demonstrating design,
+          analysis, simulation, fabrication, and testing.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-number">PROJECT 01</div>
+          <h3>Infant Incubator</h3>
+          <p>
+            Engineering design project focused on developing and evaluating
+            a system to maintain controlled environmental conditions.
+            Add your project description, design decisions, analysis,
+            and final results here.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Mechanical Design</span>
+            <span class="tag">CAD</span>
+            <span class="tag">Testing</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">PROJECT 02</div>
+          <h3>CNC Lathe Project</h3>
+          <p>
+            Hands-on machining project involving CNC manufacturing,
+            process planning, dimensional considerations, and fabrication.
+            Add photos and specific machining details here.
+          </p>
+
+          <div class="tags">
+            <span class="tag">CNC</span>
+            <span class="tag">Machining</span>
+            <span class="tag">Manufacturing</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">PROJECT 03</div>
+          <h3>Ferris-Wheel Dynamics</h3>
+          <p>
+            Engineering analysis project involving dynamic system behavior,
+            modeling, calculations, and interpretation of results.
+            Add your specific equations, assumptions, and conclusions here.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Dynamics</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Analysis</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">PROJECT 04</div>
+          <h3>Elevator Simulation</h3>
+          <p>
+            Simulation project focused on modeling the behavior of an
+            elevator system and evaluating system response.
+            Add your control strategy, simulation results, and design details here.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Simulation</span>
+            <span class="tag">Controls</span>
+            <span class="tag">MATLAB</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Let's Connect</h2>
+
+      <p>
+        I am interested in opportunities where I can apply mechanical
+        engineering, design, analysis, and hands-on problem solving.
+      </p>
+
+      <div class="contact-links">
+        <!-- Replace the # links below with your actual URLs. -->
+        <a class="contact-link" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="contact-link" href="#" target="_blank" rel="noopener">GitHub</a>
+        <a class="contact-link" href="mailto:your.email@example.com">Email</a>
+        <a class="contact-link" href="#" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Engineering Portfolio. Built with HTML & CSS.</p>
+  </footer>
+
+  <script>
+    // Automatically updates the copyright year.
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
