@@ -78,7 +78,7 @@ Simulation project focused on modeling the behavior of an elevator system and ev
 
 ## Portfolio Website
 
-🌐 **[View My Engineering Portfolio]([https://sierra-manriquez.github.io/engineering-portfolio/](https://sierra-manriquez.github.io/))**
+🌐 **[View My Engineering Portfolio](https://sierra-manriquez.github.io/engineering-portfolio/)**
 
 ## Connect With Me
 
