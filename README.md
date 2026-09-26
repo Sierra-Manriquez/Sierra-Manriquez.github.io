@@ -2,6 +2,18 @@
 
 Welcome to my engineering portfolio! This repository contains the source code for my personal portfolio website, where I showcase my education, engineering experience, technical skills, and projects.
 
+## Portfolio Website
+
+🌐 **[View My Engineering Portfolio](https://sierra-manriquez.github.io/)**
+
+## Connect With Me
+
+**LinkedIn:** [linkedin.com/in/sierra-manriquez](linkedin.com/in/sierra-manriquez)
+
+**GitHub:** [https://sierra-manriquez.github.io/](https://sierra-manriquez.github.io/)
+
+**Email:** [smmanriq@mtu.edu](mailto:smmanriq@mtu.edu)
+
 ## About Me
 
 I am a Mechanical Engineering student at Michigan Technological University with an interest in mechanical design, engineering analysis, manufacturing, and hands-on problem solving.
@@ -75,18 +87,6 @@ Engineering analysis project involving dynamic system behavior, mathematical mod
 Simulation project focused on modeling the behavior of an elevator system and evaluating system response.
 
 **Skills:** Simulation · Controls · MATLAB
-
-## Portfolio Website
-
-🌐 **[View My Engineering Portfolio](https://sierra-manriquez.github.io/)**
-
-## Connect With Me
-
-**LinkedIn:** [linkedin.com/in/sierra-manriquez](linkedin.com/in/sierra-manriquez)
-
-**GitHub:** [https://sierra-manriquez.github.io/](https://sierra-manriquez.github.io/)
-
-**Email:** [smmanriq@mtu.edu](mailto:smmanriq@mtu.edu)
 
 ## Technologies Used
 
