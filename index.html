@@ -260,6 +260,31 @@
       font-weight: 700;
     }
 
+    .project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.project-figure {
+    margin: 0;
+}
+
+.project-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-figure figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
     /* =========================================================
        CONTACT
        ========================================================= */
@@ -476,14 +501,38 @@
 
       <div class="project-grid">
 
-        <!-- PROJECT 01 PHOTO -->
+        <!-- PROJECT 01 IMAGES -->
 
-        <div class="project-image">
+        <div class="project-images">
 
-          <img
-            src="images/Orifice Plate Part Drawing.png"
-            alt="Orifice Plate Engineering Drawing"
-          >
+          <!-- Figure 1 -->
+          <figure class="project-figure">
+
+            <img
+              src="images/Orifice Plate Part Drawing.png"
+              alt="Orifice Plate Engineering Drawing"
+            >
+
+            <figcaption>
+              Figure 1. Engineering drawing of the ASME-compliant orifice plate.
+            </figcaption>
+
+          </figure>
+
+
+          <!-- Figure 2 -->
+          <figure class="project-figure">
+
+            <img
+              src="images/2mm_displacement.png"
+              alt="Simcenter 3D Displacement Simulation"
+            >
+
+            <figcaption>
+              Figure 2. Simcenter 3D displacement simulation of the orifice plate.
+            </figcaption>
+
+          </figure>
 
         </div>
 
@@ -501,11 +550,10 @@
             unit heating system.
           </p>
 
-
           <div class="project-details">
 
             <p>
-              <strong>My contribution & Engineering Approach:</strong>
+              <strong>My Contribution & Engineering Approach:</strong>
               I designed and tested an ASME-compliant orifice plate using
               2D/3D FEA, built MATLAB tools to quantify system uncertainty,
               and tuned PID controllers for stable thermal performance.
@@ -544,14 +592,22 @@
 
       <div class="project-grid">
 
-        <!-- PROJECT 02 PHOTO -->
+        <!-- PROJECT 02 IMAGE -->
 
-        <div class="project-image">
+        <div class="project-images">
 
-          <img
-            src="images/2mm_displacement.png"
-            alt="Simcenter 3D Displacement Simulation"
-          >
+          <figure class="project-figure">
+
+            <img
+              src="images/Bridge Truss MATLAB Exaggerated Displacement Plot.png"
+              alt="Ferris Wheel Control System"
+            >
+
+            <figcaption>
+              Figure 3. Ferris Wheel control system analysis.
+            </figcaption>
+
+          </figure>
 
         </div>
 
@@ -569,11 +625,10 @@
             control system.
           </p>
 
-
           <div class="project-details">
 
             <p>
-              <strong>My contribution & Engineering Approach:</strong>
+              <strong>My Contribution & Engineering Approach:</strong>
               I collected and processed motor data to evaluate power
               consumption, compare analytical and numerical torque values,
               and plot angular kinetic energy trends. To ensure accurate
@@ -592,6 +647,10 @@
       </div>
 
     </article>
+
+
+  </div>
+</section>
 
 
     <!-- ===================================================
