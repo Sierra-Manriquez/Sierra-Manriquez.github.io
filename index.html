@@ -260,6 +260,31 @@
       font-weight: 700;
     }
 
+    .project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.project-figure {
+    margin: 0;
+}
+
+.project-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-figure figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
     /* =========================================================
        CONTACT
        ========================================================= */
@@ -457,128 +482,186 @@
        - Tools/skills
        ======================================================= -->
 
-  <section class="projects" id="projects">
-    <div class="container">
+<section class="projects" id="projects">
+  <div class="container">
 
-      <h2 class="section-title">Engineering Projects</h2>
+    <h2 class="section-title">Engineering Projects</h2>
 
-      <p class="projects-intro">
-        Selected engineering projects demonstrating design,
-        analysis, fabrication, simulation, and problem solving.
-      </p>
+    <p class="projects-intro">
+      Selected engineering projects demonstrating design,
+      analysis, fabrication, simulation, and problem solving.
+    </p>
 
 
-      <!-- ===================================================
-           PROJECT 01
-           =================================================== -->
+    <!-- ===================================================
+         PROJECT 01
+         =================================================== -->
 
-      <article class="project">
+    <article class="project">
 
-        <div class="project-grid">
+      <div class="project-grid">
 
-          <!-- PROJECT PHOTO -->
+        <!-- PROJECT 01 IMAGES -->
 
-          <div class="project-image">
+        <div class="project-images">
+
+          <!-- Figure 1 -->
+          <figure class="project-figure">
 
             <img
               src="images/Orifice Plate Part Drawing.png"
               alt="Orifice Plate Engineering Drawing"
             >
 
-          </div>
+            <figcaption>
+              Figure 1. Engineering drawing of the ASME-compliant orifice plate.
+            </figcaption>
 
-          <!-- PROJECT INFORMATION -->
-
-          <div>
-
-            <div class="project-number">PROJECT 01</div>
-
-            <!-- Replace with your project name -->
-            <h3>Flow Measurment and Thermal Systems Control</h3>
-
-            <!--
-              Keep the overview around 3–5 sentences.
-              Focus on the engineering problem and objective.
-            -->
-
-            <p class="project-description">
-              This project involved designing and developing a mobile incubator 
-              unit heating system.
-            </p>
+          </figure>
 
 
-            <div class="project-details">
-
-              <!--
-                Explain YOUR specific contribution here.
-                This is especially important for group projects.
-              -->
-
-              <p>
-                <strong> My contribution & Engineering Approach:</strong>
-                I designed and tested an ASME‑compliant orifice plate using 2D/3D FEA, built MATLAB tools to quantify 
-                system uncertainty, and tuned PID controllers for stable thermal performance. I wrote a full SOP for a 
-                heating‑system test rig and gained hands‑on experience analyzing sensor dynamics, evaluating airflow and 
-                viscosity methods, interpreting fan performance data, and machining parts from professional engineering 
-                drawings.
-              </p>
-<style>
-    .document-button {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #333;
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .document-button:hover {
-        background-color: #555;
-    }
-</style>
-
-<a href="documents/Test Rig SOP.pdf" target="_blank" class="document-button">
-    Test Rig SOP
-</a>
-
-
-              
-  <article class="project">
-
-        <div class="project-grid">
-
-          <!-- PROJECT PHOTO -->
-
- <div class="project-image">
+          <!-- Figure 2 -->
+          <figure class="project-figure">
 
             <img
-              src="2mm_displacement.png"
-              alt="Simcenter3D Displacement Simulation"
+              src="images/2mm_displacement.png"
+              alt="Simcenter 3D Displacement Simulation"
             >
-</div>
-      <!-- ===================================================
-           FUTURE PROJECTS
 
-           When you are ready to add another project, copy the
-           entire <article class="project"> section above and
-           paste it below this comment.
+            <figcaption>
+              Figure 2. Simcenter 3D displacement simulation of the orifice plate.
+            </figcaption>
 
-           Then change:
-           - Project number
-           - Image filename
-           - Image alt text
-           - Project name
-           - Description
-           - Your contribution
-           - Engineering approach
-           - Tags
-           =================================================== -->
+          </figure>
 
-    </div>
-  </section>
+        </div>
+
+
+        <!-- PROJECT 01 INFORMATION -->
+
+        <div>
+
+          <div class="project-number">PROJECT 01</div>
+
+          <h3>Flow Measurement and Thermal Systems Control</h3>
+
+          <p class="project-description">
+            This project involved designing and developing a mobile incubator
+            unit heating system.
+          </p>
+
+          <div class="project-details">
+
+            <p>
+              <strong>My Contribution & Engineering Approach:</strong>
+              I designed and tested an ASME-compliant orifice plate using
+              2D/3D FEA, built MATLAB tools to quantify system uncertainty,
+              and tuned PID controllers for stable thermal performance.
+              I wrote a full SOP for a heating-system test rig and gained
+              hands-on experience analyzing sensor dynamics, evaluating
+              airflow and viscosity methods, interpreting fan performance
+              data, and machining parts from professional engineering
+              drawings.
+            </p>
+
+          </div>
+
+
+          <!-- PROJECT 01 DOCUMENT BUTTON -->
+
+          <a
+            href="documents/Test Rig SOP.pdf"
+            target="_blank"
+            class="document-button"
+          >
+            Test Rig SOP
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ===================================================
+         PROJECT 02
+         =================================================== -->
+
+    <article class="project">
+
+      <div class="project-grid">
+
+        <!-- PROJECT 02 IMAGE -->
+
+        <div class="project-images">
+
+          <figure class="project-figure">
+
+            <img
+              src="images/Bridge Truss MATLAB Exaggerated Displacement Plot.png"
+              alt="Ferris Wheel Control System"
+            >
+
+            <figcaption>
+              Figure 3. Ferris Wheel control system analysis.
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+
+        <!-- PROJECT 02 INFORMATION -->
+
+        <div>
+
+          <div class="project-number">PROJECT 02</div>
+
+          <h3>PID Stability Optimization & Dynamics Analysis</h3>
+
+          <p class="project-description">
+            This project involved designing and developing a Ferris Wheel
+            control system.
+          </p>
+
+          <div class="project-details">
+
+            <p>
+              <strong>My Contribution & Engineering Approach:</strong>
+              I collected and processed motor data to evaluate power
+              consumption, compare analytical and numerical torque values,
+              and plot angular kinetic energy trends. To ensure accurate
+              measurements, I incorporated barometric pressure readings,
+              corrected for sensor bias, and performed a human-factors
+              assessment by comparing velocity and acceleration profiles
+              to biomechanical tolerance limits for rider comfort. I also
+              integrated a factor of safety into the design to ensure
+              structural and operational reliability.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+  </div>
+</section>
+
+
+    <!-- ===================================================
+         FUTURE PROJECTS
+         
+         When you are ready to add another project, copy an
+         entire <article class="project"> section above.
+         =================================================== -->
+
+  </div>
+</section>
 
 
   <!-- =======================================================
